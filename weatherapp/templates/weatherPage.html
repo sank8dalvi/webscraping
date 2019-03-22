@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>What's The Weather?</h1>
+<form method="POST">
+    <fieldset class="form-group">
+      <label for="city">Enter the name of a city.</label>
+      <input type="text" class="form-control" name="text" id="city" placeholder="Eg. London, Tokyo">
+    </fieldset>
+    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div id="weather">
+  <!--
+  <div class="alert alert-success" role="alert">{{city}}</div>
+  <div class="alert alert-success" role="alert">{{date}}</div>
+  -->
+  <h2>{{city}}</h2>
+  <br>
+  {{currentClimate|safe}}
+</div>
+</div>
+{% endblock %}
